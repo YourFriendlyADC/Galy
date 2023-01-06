@@ -8,14 +8,7 @@
 body {
     background-color: #879cfa;
     overflow-x: hidden;
-    /* padding: 0.625em; */
 }
-
-/* header {
-    padding: 0.625em 0.625em;
-    background-color: #4871f7;
-    box-shadow: 0 4px 5px #152f83;
-} */
 
 ul {
     margin: 0;
@@ -44,7 +37,6 @@ i {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* box-shadow: 0 5px 5px #05199c; */
 }
 
 .navbar-mobile {
@@ -78,6 +70,7 @@ i {
 }
 
 #navbar-header:target .navbar-container {
+    position: fixed;
     height: calc(100% - 3em);
     transition: height ease 0.6s;
 }
@@ -105,9 +98,27 @@ i {
     margin: 0;
 }
 
-.card {    
+.phone-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.desk-images {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.phone {    
     width: 140px;
     height: 280px;
+    margin: 1.8em auto;
+    border-radius: 10%;
+    box-shadow: 0.5em 0.5em 0.5em #284bbe;
+}
+
+.desk {
+    width: 153px;
+    height: 86px;
     margin: 1.8em auto;
     border-radius: 10%;
     box-shadow: 0.5em 0.5em 0.5em #284bbe;
@@ -120,16 +131,21 @@ i {
     border-radius: 10%;
 }
 
-.images {
-    padding: 0.5em;
+/* .images .phone {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-}
+} */
+
+/* .images .desk {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+} */
 
 /* Footer */
 footer {
-    background-color: #284bbe;
+    background-color: #284bbe;   
 }
 
 footer h3 {
@@ -140,27 +156,60 @@ footer h3 {
 }
 
 footer ul {
-    padding: 0.75em;
+    padding-bottom: 2em;
+    /* margin: 0 30px; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
+@media only screen and (min-width: 350px) {
+    .phone-images {
+        padding: 0.5em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .desk {
+        width: 256px;
+        height: 144px;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .desk {
+        width: 320px;
+        height: 180px;
+    }
+}
+
 @media only screen and (min-width: 550px) {
-    .images {
+    .phone-images {
         padding: 0.5em;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .desk-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .desk {
+        width: 256px;
+        height: 144px;
     }
 }
 
 @media only screen and (min-width: 710px) {
-    .images {
+    .phone-images {
         padding: 0.5em;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .desk {
+        width: 320px;
+        height: 180px;
     }
 }
 
@@ -194,25 +243,55 @@ footer ul {
         transition: 0.5s;
     }
 
-    .images {
+    .phone-images {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }    
+    }
+
+    .desk {
+        width: 256px;
+        height: 144px;
+    }
 }
 
 @media only screen and (min-width: 850px) {
-    .images {
+    .phone-images {
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }  
+    }
+
+    .desk-images {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media only screen and (min-width: 950px) {
-    .images {
+    .phone-images {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }  
+    }
+
+    .desk {
+        width: 246px;
+        height: 144px;
+    }
 }
 
+@media only screen and (min-width: 1000px) {
+    .desk {
+        width: 295px;
+        height: 166px;
+    }
+}
 
+@media only screen and (min-width: 1200px) {
+    .desk {
+        width: 320px;
+        height: 180px;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .desk {
+        width: 384px;
+        height: 216px;
+    }
+}
 
