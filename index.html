@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title> Galy - Wallpapers Gallery </title>
         <meta charset="utf-8">
@@ -14,10 +14,10 @@
         <script src="https://kit.fontawesome.com/6b69f5d989.js" crossorigin="anonymous"></script>
     </head>
 
-    <body>
-        <nav class="navbar" id="navbar-header">
-            <header class="navbar-header">
-                <a href="#" class="brand-link">
+<body>
+    <header class="navbar" id="navbar-header">
+            <nav class="navbar-header">
+                <a href="#" class="brand-link">                    
                     <i class="fa-solid fa-leaf"></i>
                     <span class="brand"> Galy </span>
                 </a>
@@ -27,48 +27,82 @@
                 <a href="#" class="navbar-menu-mobile close">
                     <i class="fa-solid fa-xmark"></i>
                 </a>                
-            </header>
-
-            <ul class="navbar-container">
-                <li class="navbar-icon">
-                    <a href="#" class="navbar-link navbar-link-active"> Home </a>
-                </li>
-                <li class="navbar-item">
-                    <a href="index.html" class="navbar-link"> For Phone  </a>
-                </li>
-                <li class="navbar-item">
-                    <a href="desk.html" class="navbar-link"> For Desktop </a>
-                </li>               
-                <li class="navbar-item">
-                    <a href="#footer" class="navbar-link"> Contact </a>
-                </li>
-            </ul>
-        </nav>
-        <section>
-            <div class="title">
-                <h1> Choose your Wallpaper! </h1>                
-            </div>
-            <div class="phone-images">
+            </nav>
+            <nav class="navbar-container">
+                    <a href="index.html" class="navbar-link navbar-link-active">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a>
+                    <a href="phone.html" class="navbar-link">
+                        <i class="fa-solid fa-mobile"></i> Only Phone
+                    </a>
+                    <a href="desk.html" class="navbar-link">
+                        <i class="fa-solid fa-desktop"></i> Only Desktop
+                    </a>              
+                    <a href="#footer" class="navbar-link"><i class="fa-solid fa-circle-info"></i> Contact
+                    </a>                
+            </nav>
+    </header>
+    <section>
+        <div class="title">
+            <h1> Choose your Wallpaper! </h1>                
+        </div>
+        <h3> For Phone </h3>
+        <div class="phone-images">
+            <div class="modal-button">
+                <label for="modal-button">
+                    <img class="card phone" src="images/phone/IMG_7305.JPG" title="image">
+                </label>                
+            </div>            
+            <img class="card phone" src="images/phone/IMG_7308.JPG">
+            <img class="card phone" src="images/phone/IMG_7309.JPG">
+            <img class="card phone" src="images/phone/IMG_7310.JPG">
+            <img class="card phone" src="images/phone/IMG_7397.JPG">
+            <img class="card phone" src="images/phone/IMG_7398.JPG">           
+        </div>
+        <h3> For Desktop </h3>
+        <div class="desk-images">
+            <img class="card desk" src="images/desktop/1.jpg">
+            <img class="card desk" src="images/desktop/2.jpg">
+            <img class="card desk" src="images/desktop/3.jpg">
+        </div>
+        <input type="checkbox" id="modal-button">
+        <div class="modal-container">
+            <div class="modal-content">
                 <img class="card phone" src="images/phone/IMG_7305.JPG" title="image">
-                <img class="card phone" src="images/phone/IMG_7308.JPG" title="image">
-                <img class="card phone" src="images/phone/IMG_7309.JPG" title="image">
-                <img class="card phone" src="images/phone/IMG_7310.JPG" title="image">
-                <img class="card phone" src="images/phone/IMG_7311.JPG" title="image">
-                <img class="card phone" src="images/phone/IMG_7312.JPG" title="image">
-                <img class="card phone" src="images/phone/IMG_7390.JPG" title="image">
-                <img class="card phone" src="images/phone/IMG_7397.JPG" title="image">           
+                <div>
+                    <div class="download-buton">
+                        <a href="./images/phone/IMG_7305.JPG" download>
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                    <div class="close-button">
+                        <label for="modal-button"> <i class="fa-solid fa-xmark"></i> </label>
+                    </div>
+                </div>
             </div>
-            <footer id="footer">
-                <h3> Social </h3>
-                <ul>
-                    <li><a href="https://www.instagram.com/YourFriendlyADC/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="" target="_blank">
-                        <i class="fa-solid fa-envelope"></i></a></li>
-                    <li><a href="https://twitter.com/yourfriendlyadc" target="_blank">
-                        <i class="fa-brands fa-twitter"></i></a></li>
-                </ul>
-            </footer>
-        </section>
-    </body>
+            <label for="modal-button" class="modal-bg"></label>
+        </div>
+    </section>
+    <footer id="footer">
+            <h3 class="title"> Social </h3>
+            <div class="social">
+                <div class="ig">
+                    <a href="https://www.instagram.com/YourFriendlyADC/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="tt">
+                    <a href="https://twitter.com/yourfriendlyadc" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+                <div class="mail">
+                    <a href="" target="_blank">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>      
+            </div>
+            <p> All of these wallpapers are NOT mine, I just compilated them and put them here. </p>
+    </footer>
+</body>
 </html>
