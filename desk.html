@@ -15,68 +15,40 @@
 </head>
 <body>
     <header class="navbar" id="navbar-header">
-        <nav class="navbar-header">
-            <a href="#" class="brand-link">                    
-                <i class="fa-solid fa-leaf"></i>
-                <span class="brand"> Galy </span>
-            </a>
-            <a href="#navbar-header" class="navbar-menu-mobile open">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-            <a href="#" class="navbar-menu-mobile close">
-                <i class="fa-solid fa-xmark"></i>
-            </a>                
-        </nav>
-        <nav class="navbar-container">
-                <a href="index.html" class="navbar-link navbar-link-active">
-                    <i class="fa-solid fa-house"></i> Home
-                </a>
-                <a href="phone.html" class="navbar-link">
-                    <i class="fa-solid fa-mobile"></i> Only Phone
-                </a>
-                <a href="desk.html" class="navbar-link">
-                    <i class="fa-solid fa-desktop"></i> Only Desktop
-                </a>              
-                <a href="#footer" class="navbar-link"><i class="fa-solid fa-circle-info"></i> Contact
-                </a>                
-        </nav>
     </header>
     <section>
         <div class="title">
-            <h1> Choose your Wallpaper! </h1>                
+            <h1> Wallpapers for Desktop </h1>
+        </div>
+        <div class="carrusel-desk" id="carrusel" style="transform: scale(0); height: 0;">
+        </div>
+        <div class="carrusel-phone" id="carrusel" style="transform: scale(0); height: 0;">
         </div>
         <div class="desk-images">
-            <img class="card desk" src="images/desktop/1.jpg" title="image">
-            <img class="card desk" src="images/desktop/2.jpg" title="image">
-            <img class="card desk" src="images/desktop/3.jpg" title="image">
-            <img class="card desk" src="images/desktop/4.jpg" title="image">
-            <img class="card desk" src="images/desktop/5.jpg" title="image">
-            <img class="card desk" src="images/desktop/6.jpg" title="image">
-            <img class="card desk" src="images/desktop/7.jpg" title="image">
-            <img class="card desk" src="images/desktop/8.jpg" title="image">           
         </div>
+        <div class="phone-images" style="transform: scale(0); height: 0;">
+        </div>
+        <!-- Modal window -->
+        <div class="modal-container">
+            <div class="modal-content">
+                <img class="card" title="image">
+                <div>
+                    <div class="download-buton">
+                        <a download target="_blank">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                    <div class="close-button">
+                        <label for="modal-button"> <i class="fa-solid fa-xmark"></i> </label>
+                    </div>
+                </div>
+            </div>
+            <label for="modal-button" class="modal-bg"></label>
+        </div> <br>
     </section>
     <footer id="footer">
-        <h3 class="title"> Social </h3>
-        <div class="social">
-            <div class="ig">
-                <a href="https://www.instagram.com/YourFriendlyADC/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
-            <div class="tt">
-                <a href="https://twitter.com/yourfriendlyadc" target="_blank">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-            </div>
-            <div class="mail">
-                <a href="" target="_blank">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-            </div>      
-        </div>
-        <p> All of these wallpapers are NOT mine, I just compilated them and put them here </p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
 
