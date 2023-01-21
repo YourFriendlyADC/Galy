@@ -149,23 +149,13 @@ header {
     align-self: center;
 }
 
-/* .desk-item-1 {
-    align-self: flex-start;
-}
-
-.desk-item- {
-    align-self: flex-end;
-} */
-
 .carrusel-phone-item:hover {
     transform: scale(1.1);
-    border: 0.3em solid #EFF9FE;
     cursor: pointer;
 }
 
 .carrusel-desk-item:hover {
     transform: scale(1.1);
-    border: 0.3em solid #EFF9FE;
     cursor: pointer;
 }
 
@@ -262,7 +252,7 @@ section h3 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 50%;
+    width: 85%;
     border-radius: 10%;
     transition: 0.5s;
 }
@@ -271,12 +261,13 @@ section h3 {
     width: 250px;
     height: 500px;
     box-shadow: none;
-    border: 0.2em solid #DDD;
+    border: 0.2em solid #111;
 }
 
 .modal-content .desk {
-    width: 500px;
-    height: 250px;
+    width: 325px;
+    height: 162px;
+    box-shadow: none;
     border: 0.2em solid #111;
 }
 
@@ -331,7 +322,6 @@ footer .social {
 }
 
 footer .social div {
-    /* padding: 0 0.75em; */
     border-radius: 100%;
 }
 
@@ -361,23 +351,6 @@ footer .social .mail a p {
     padding: 0;
 }
 
-@media only screen and (min-width: 450px) {
-    .phone {    
-        width: 140px;
-        height: 280px;
-    }
-    
-    .desk {
-        width: 320px;
-        height: 180px;
-    }
-
-    .modal-content img {
-        width: 290px;
-        height: 580px;
-    }
-}
-
 @media only screen and (min-width: 550px) {
     .phone-images {
         padding: 0.5em;
@@ -386,28 +359,13 @@ footer .social .mail a p {
 
     .desk-images {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .desk {
-        width: 256px;
-        height: 144px;
-    }
-
-    .modal-content img {
-        width: 300px;
-        height: 600px;
-    }
+    }    
 }
 
 @media only screen and (min-width: 710px) {
     .phone-images {
         padding: 0.5em;
         grid-template-columns: repeat(4, 1fr);
-    }
-
-    .desk {
-        width: 320px;
-        height: 180px;
     }
 
     .modal-content div i {
@@ -451,17 +409,18 @@ footer .social .mail a p {
         cursor: pointer;
     }
 
-    .phone-images {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .desk {
-        width: 256px;
-        height: 144px;
-    }
-
     footer p {
         font-size: 1em;
+    }
+
+    .modal-content .phone {
+        width: 350px;
+        height: 700px;
+    }
+    
+    .modal-content .desk {
+        width: 700px;
+        height: 350px;
     }
 }
 
@@ -478,17 +437,12 @@ footer .social .mail a p {
     footer .social .tt i:hover {
     background-color: #EFF9FE;
     color: #284bbe;
-}
+    }
 }
 
 @media only screen and (min-width: 950px) {
     .navbar-container {
         width: 50%;
-    }
-
-    .desk {
-        width: 246px;
-        height: 144px;        
     }
 }
 
@@ -497,9 +451,9 @@ footer .social .mail a p {
         grid-template-columns: repeat(6, 1fr);
     }
 
-    .desk {
-        width: 295px;
-        height: 166px;
+    .modal-content .phone {
+        width: 250px;
+        height: 500px;
     }
 }
 
@@ -513,11 +467,3 @@ footer .social .mail a p {
         height: 180px;
     }
 }
-
-@media only screen and (min-width: 1350px) {
-    .desk {
-        width: 384px;
-        height: 216px;
-    }
-}
-

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollIntoFooter();
     setCarousel("phone");
     setCarousel("desk");
-    //startCarousel();
+    startCarousel();
 });
 
 modalContent.addEventListener("click", function(e) {
