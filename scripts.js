@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollIntoFooter();
     setCarousel("phone");
     setCarousel("desk");
-    startCarousel();
+    //startCarousel();
 });
 
-modalContent.addEventListener("click", function(e) {
+modalContent.addEventListener("click", function(e) { 
     e.stopPropagation();
 });
 
@@ -53,26 +53,38 @@ function addHeader() {
 function addFooter() {
     const footer = document.querySelector("#footer");
     footer.innerHTML = `
-            <h3 class="title"> Social </h3>
-            <div class="social">                
-                <div class="ig">
-                    <a href="https://www.instagram.com/YourFriendlyADC/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>                
-                <div class="tt">
-                    <a href="https://twitter.com/yourfriendlyadc" target="_blank">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
+            <img class="icon" src="images/GY.png" title="Galy">
+            <div class="about-me">                         
+                <h3 class="title"> Follow me </h3>                
+                <div class="social">
+                    <div class="ig">
+                        <a href="https://www.instagram.com/YourFriendlyADC/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>                
+                    <div class="tt">
+                        <a href="https://twitter.com/yourfriendlyadc" target="_blank">                        
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="pt">
+                        <a href="https://www.pinterest.com/alejandrohernandezpolo/" target="_blank">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="mail">
-                    <a>
-                        <i class="fa-solid fa-envelope"></i> 
-                        <p> jhalejandro@uninorte.edu.co </p>
-                    </a>
-                </div>                            
-            </div>
-            <p> All of these wallpapers are NOT mine, I just compilated them and put them here. </p>`;
+                    <i class="fa-solid fa-envelope"></i> 
+                    <p> jhalejandro@uninorte.edu.co </p>
+                </div>                                          
+            </div>        
+            <div class="about-galy">
+                <h3 class="title"> About Galy </h3>
+                <p> With Galy you can look for wallpapers and download it in an easy way.
+                All of these wallpapers are NOT mine, I just compilated them and put them here.
+                I hope you found anyone you like and just use it! </p>
+                <p> ADC. 2023. </p>
+            </div>`;
 }
 
 // Let the Smooth scroll into the footer
@@ -98,7 +110,7 @@ function createImages(container, imagesAmount, classType) {
         }        
         container.appendChild(imageContainer);        
     }
-}
+}  
 
 function insertImages() {
     const phoneImages = document.querySelector(".phone-images");
@@ -134,9 +146,8 @@ function setCarousel(classType) {
         carouselItem.className = `carrusel-${classType}-item`;
         carouselItem.innerHTML = `
         <img src="images/${classType}/${i}.jpg">`;
-
         carouselItemsContainer.appendChild(carouselItem);
-    }   
+    }
     carousel.appendChild(carouselItemsContainer);
 }
 
@@ -144,14 +155,12 @@ function startCarousel() {
     setInterval (function () {        
         const carouselItemsContainer = document.querySelector(".carrusel-items");
         const car = document.querySelector(".carrusel-items div");
-
         carouselItemsContainer.style.left = `-${car.clientWidth}%`;
         carouselItemsContainer.style.transition = 'all ease 1s';
-        
         setTimeout (function() {
             carouselItemsContainer.appendChild(car);
-                carouselItemsContainer.style.left = '0';
-                carouselItemsContainer.style.transition = 'none';
+            carouselItemsContainer.style.left = '0';
+            carouselItemsContainer.style.transition = 'none';
         }, 200);
     }, 1000);
 };
