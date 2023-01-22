@@ -141,7 +141,6 @@ header {
 
 .carrusel-desk-item {
     min-width: 420px;
-    /* max-width: 530px; */
     height: 240px;
     border-radius: 12%;
     transition: 0.5s;
@@ -409,7 +408,7 @@ footer .about-galy {
         flex-direction: row;
         position: static;
         align-items: center;
-        width: 65%;
+        width: 68%;
     }
 
     .navbar {
@@ -428,13 +427,14 @@ footer .about-galy {
     }
     
     .navbar-container a i {
-        font-size: 1em;
+        font-size: 1.2em;
         margin-right: 0.25em;
     }
 
     .navbar-container a:hover {
-        background-color: #05199c;
-        border-radius: 10%;
+        background-color: #EFF9FE;
+        color: #284bbe;
+        border-radius: 5%;
         transition: 0.5s;
         cursor: pointer;
     }

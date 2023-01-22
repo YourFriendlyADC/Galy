@@ -44,7 +44,8 @@ function addHeader() {
                     <a href="desk.html" class="navbar-link">
                         <i class="fa-solid fa-desktop"></i> Only Desktop
                     </a>              
-                    <a class="navbar-link" id="contact"><i class="fa-solid fa-circle-info"></i> Contact
+                    <a href="#phoneFooter" class="navbar-link" id="contact">
+                        <i class="fa-solid fa-circle-info"></i> Contact
                     </a>                
             </nav>`;
 }
@@ -111,7 +112,7 @@ function insertImages() {
     const phoneImages = document.querySelector(".phone-images");
     const deskImages = document.querySelector(".desk-images");
     createImages(deskImages, 15, "desk");
-    createImages(phoneImages, 16, "phone");
+    createImages(phoneImages, 30, "phone");
 }
 
 function showModal(image, classType) {
