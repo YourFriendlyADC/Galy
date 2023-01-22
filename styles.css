@@ -210,7 +210,7 @@ section h3 {
     height: 280px;
     margin: 1.5em 0;
     border-radius: 10%;
-    box-shadow: 0.5em 0.5em 0.5em #284bbe;
+    box-shadow: 0em 0em 0.3em #05199c;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -220,7 +220,7 @@ section h3 {
     height: 144px;
     margin: 1.8em auto;
     border-radius: 10%;
-    box-shadow: 0.5em 0.5em 0.5em #284bbe;
+    box-shadow: 0em 0em 0.3em #05199c;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -257,8 +257,8 @@ section h3 {
 }
 
 .modal-content .phone {
-    width: 250px;
-    height: 500px;
+    width: 230px;
+    height: 460px;
     box-shadow: none;
     border: 0.2em solid #111;
 }
@@ -492,8 +492,8 @@ footer .about-galy {
 
     footer .icon {
         display: flex;
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
         order: 0;
         align-self: center;
     }
