@@ -68,22 +68,17 @@ function addFooter() {
                         </a>
                     </div>
                     <div class="pt">
-                        <a href="https://www.pinterest.com/alejandrohernandezpolo/" target="_blank">
+                        <a href="https://www.pinterest.com/yourfriendlyadc/" target="_blank">
                             <i class="fa-brands fa-pinterest"></i>
                         </a>
                     </div>
-                </div>
-                <div class="mail">
-                    <i class="fa-solid fa-envelope"></i> 
-                    <p> jhalejandro@uninorte.edu.co </p>
-                </div>                                          
+                </div>                                                         
             </div>        
             <div class="about-galy">
                 <h3 class="title"> About Galy </h3>
-                <p> With Galy you can look for wallpapers and download it in an easy way.
+                <p class=""description> With Galy you can look for wallpapers and download it in an easy way.
                 All of these wallpapers are NOT mine, I just compilated them and put them here.
-                I hope you found anyone you like and just use it! </p>
-                <p> ADC. 2023. </p>
+                I hope you found anyone you like and just use it! </p>                
             </div>`;
 }
 

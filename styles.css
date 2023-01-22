@@ -314,8 +314,6 @@ footer .title {
     padding: 0.7em 0.7em 0.25em;
     font-size: 1.75em;
     text-align: center;
-    /* justify-items: center;
-    align-items: center; */
 }
 
 footer .icon {
@@ -323,8 +321,10 @@ footer .icon {
 }
 
 footer i {
-    color: #EFF9FE;
-    font-size: 2.5em;
+    color: #284bbe;
+    font-size: 2em;
+    border-radius: 10%;
+    background-color: #EFF9FE;
 }
 
 footer .about-me {
@@ -336,16 +336,19 @@ footer .about-me {
 }
 
 footer .social i {
-    padding: 0.5em;
-    border-radius: 100%;
+    padding: 0.25em 0.4em;
+    margin: 0.25em;
     transition: 0.5s;
 }
 
 footer p {
-    text-align: center;
+    text-align: justify;
     color: #EFF9FE;
     font-size: 1em;
-    padding: 0.625em 1em;
+    padding: 0.625em 3.5em 1.5em;
+}
+footer .about-galy p.description {
+    text-align: justify;
 }
 
 footer .social {
@@ -359,10 +362,18 @@ footer .mail {
     justify-content: center;
 }
 
+footer .mail i {
+    padding: 0.2em 0.3em;
+    border-radius: 10% 0 0 10%;
+}
+
 footer .mail p {
-    padding: 0;
+    padding: 0.8em 1em 0.8em 0.4em;
     margin-left: 0.625em;
+    border-radius: 0% 10% 10% 0%;
     font-size: 1.2em;
+    color: #05199c;
+    background-color: #EFF9FE;
 }
 
 footer .about-galy {
@@ -448,9 +459,8 @@ footer .about-galy {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    footer .social .ig i:hover,
-    footer .social .tt i:hover {
-    background-color: #EFF9FE;
+    footer .social i:hover {
+    background-color: #051477;
     color: #284bbe;
     }
 
@@ -460,17 +470,14 @@ footer .about-galy {
         align-items: flex-start;
     }
 
-    footer i {
-        font-size: 2em;
-    }
-
-    footer about-galy p {
+    footer .about-galy p {
         font-size: 0.9em;
     }
 
     footer .about-me {
-        width: 30%;
+        width: 20%;
         order: 2;
+        align-content: center;
     }
 
     footer .about-me p {
@@ -490,11 +497,9 @@ footer .about-galy {
         order: 0;
         align-self: center;
     }
-}
 
-@media only screen and (min-width: 950px) {
-    .navbar-container {
-        width: 50%;
+    footer p {
+        padding: 0.625em 1em;
     }
 }
 
