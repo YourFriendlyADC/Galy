@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollIntoFooter();
     setCarousel("phone");
     setCarousel("desk");
-    //startCarousel();
+    startCarousel();
 });
 
 modalContent.addEventListener("click", function(e) { 
@@ -94,7 +94,9 @@ function scrollIntoFooter() {
     });
 }
 
-function createImages(container, imagesAmount, classType) {            
+function createImages(container, imagesAmount, classType) {
+    if (!container) return   
+
     for (let i = 0; i < imagesAmount; i++) {
         const imageContainer = document.createElement(`div`);
         imageContainer.innerHTML = `
@@ -106,7 +108,7 @@ function createImages(container, imagesAmount, classType) {
         }        
         container.appendChild(imageContainer);        
     }
-}  
+}
 
 function insertImages() {
     const phoneImages = document.querySelector(".phone-images");
@@ -135,6 +137,7 @@ function closeModal() {
 
 function setCarousel(classType) {
     const carousel = document.querySelector(`.carrusel-${classType}`);
+    if (!carousel) return
     const carouselItemsContainer = document.createElement('div');
     carouselItemsContainer.className = "carrusel-items";
     for (let i = 0; i < 5; i++) {
@@ -148,15 +151,34 @@ function setCarousel(classType) {
 }
 
 function startCarousel() {
-    setInterval (function () {        
-        const carouselItemsContainer = document.querySelector(".carrusel-items");
-        const car = document.querySelector(".carrusel-items div");
-        carouselItemsContainer.style.left = `-${car.clientWidth}%`;
+    const carouselItemsContainer = document.querySelector(".carrusel-items");
+    let car;
+    let position = 0;
+    const observer = new IntersectionObserver(elementObserver, {
+        rootMargin: "200px"
+    });
+
+    setInterval (function () { 
+        car = document.querySelector(".carrusel-items div");
+        carouselItemsContainer.style.left = `-${position}%`;
+        position++;
         carouselItemsContainer.style.transition = 'all ease 1s';
-        setTimeout (function() {
-            carouselItemsContainer.appendChild(car);
-            carouselItemsContainer.style.left = '0';
-            carouselItemsContainer.style.transition = 'none';
-        }, 200);
-    }, 1000);
+
+        observer.observe(car);
+    }, 100);
+    
+    
+    function elementObserver(entries) {
+        entries.forEach(function(entry) {
+            
+            if (!entry.isIntersecting) {
+
+                carouselItemsContainer.appendChild(entry.target);
+                carouselItemsContainer.style.left = "0.2%";
+                carouselItemsContainer.style.transition = 'none';
+                position = 0;
+                observer.unobserve(entry.target);
+            }
+        })
+    }
 };
