@@ -131,7 +131,12 @@ header {
     overflow: hidden;
 }
 
-.carrusel-items {
+.carrusel-phone-items {
+    display: flex;
+    position: absolute;    
+}
+
+.carrusel-desk-items {
     display: flex;
     position: absolute;    
 }
@@ -224,7 +229,7 @@ section h3 {
     height: 280px;
     margin: 1.5em 0;
     border-radius: 1rem;
-    box-shadow: 0em 0em 0.3em #05199c;
+    box-shadow: 0em 0em 0.3em #031272;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -234,7 +239,7 @@ section h3 {
     height: 144px;
     margin: 1.8em auto;
     border-radius: 1rem;
-    box-shadow: 0em 0em 0.3em #05199c;
+    box-shadow: 0em 0em 0.3em #031272;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -253,7 +258,6 @@ section h3 {
     display: flex;    
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
     z-index: 100;
     transition: all ease-out 0.5s;
     transform: scale(0);
@@ -266,7 +270,6 @@ section h3 {
     align-items: center;
     flex-wrap: wrap;
     width: 85%;
-    border-radius: 10%;
     transition: 0.5s;
 }
 
@@ -275,7 +278,7 @@ section h3 {
     height: 460px;
     box-shadow: none;
     border: 0.2em solid #111;
-}
+} 
 
 .modal-content .desk {
     width: 325px;
@@ -284,21 +287,36 @@ section h3 {
     border: 0.2em solid #111;
 }
 
+.modal-content .phone:hover {
+    filter: none;
+}
+
+.modal-content .desk:hover {
+    filter: none;
+}
+
 .modal-content div i {
-    background-color: #284bbe;
+    display: flex;
     color: #EFF9FE;
-    border-radius: 20%;
-    font-size: 2em;
-    padding: 0.625em 0.75em;
+    border-radius: 0.5rem;
     margin: 0 0.75em;
     cursor: pointer;
+    font-size: 1.3em;
+    align-items: baseline;
+}
+
+.modal-content .download-button i {
+    padding: 0.625em 0.75em;
+    background-color: #284bbe;
+}
+
+.modal-content i p {
+    margin-left: 0.4em;
 }
 
 .modal-content .close-button i {
     background-color: #be2828;
-    font-size: 1.5em;
     padding: 0.5em 0.625em;
-    cursor: pointer;
 }
 
 .modal-content div {
@@ -320,6 +338,7 @@ footer {
     background-color: #284bbe;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
 }
 
 footer .title {
@@ -337,7 +356,7 @@ footer i {
     color: #284bbe;
     font-size: 2em;
     border-radius: 10%;
-    background-color: #c3cfd4;
+    background-color: #EFF9FE;
 }
 
 footer .about-me {
@@ -360,33 +379,10 @@ footer p {
     font-size: 1em;
     padding: 0.625em 3.5em 1.5em;
 }
-footer .about-galy p.description {
-    text-align: justify;
-}
 
 footer .social {
     display: flex;
     flex-direction: row;
-}
-
-footer .mail {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer .mail i {
-    padding: 0.2em 0.3em;
-    border-radius: 10% 0 0 10%;
-}
-
-footer .mail p {
-    padding: 0.8em 1em 0.8em 0.4em;
-    margin-left: 0.625em;
-    border-radius: 0% 10% 10% 0%;
-    font-size: 1.2em;
-    color: #05199c;
-    background-color: #EFF9FE;
 }
 
 footer .about-galy {
@@ -436,7 +432,7 @@ footer .about-galy {
     .navbar-container a {
         font-size: 1em;
         padding: 0.6em 1em;
-        border-radius: 10%;
+        border-radius: 0.5rem;
         transition: 0.5s;
     }
     
@@ -448,7 +444,7 @@ footer .about-galy {
     .navbar-container a:hover {
         background-color: #EFF9FE;
         color: #284bbe;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         transition: 0.5s;
         cursor: pointer;
     }
@@ -471,6 +467,14 @@ footer .about-galy {
 
     .desk-images {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .phone:hover, .desk:hover {
+        filter: saturate(1.5);
+    }
+
+    footer .social i {
+        background-color: #b4c3c9;
     }
 
     footer .social i:hover {

@@ -1,15 +1,18 @@
 
 const modalContainer = document.querySelector(".modal-container");
 const modalContent = document.querySelector(".modal-content");
+const footer = document.querySelector("#footer");
+
 
 document.addEventListener("DOMContentLoaded", function() {
     addHeader();
-    insertImages();    
+    setImages();    
     addFooter();
     scrollIntoFooter();
     setCarousel("phone");
     setCarousel("desk");
-    startCarousel();
+    //startCarousel("phone");
+    //startCarousel("desk");
 });
 
 modalContent.addEventListener("click", function(e) { 
@@ -18,10 +21,9 @@ modalContent.addEventListener("click", function(e) {
 
 // Functions
 
-// Add the Header
 function addHeader() {
-    const header = document.querySelector("#navbar-header");
-    header.innerHTML = `
+    const headerNav = document.querySelector("#navbar-header");
+    headerNav.innerHTML = `
             <nav class="navbar-header">
                 <a href="/" class="brand-link">                    
                     <i class="fa-solid fa-leaf"></i>
@@ -50,9 +52,7 @@ function addHeader() {
             </nav>`;
 }
 
-// Add the Footer
 function addFooter() {
-    const footer = document.querySelector("#footer");
     footer.innerHTML = `
             <img class="icon" src="images/GY.png" title="Galy">
             <div class="about-me">                         
@@ -72,8 +72,8 @@ function addFooter() {
                         <a href="https://www.pinterest.com/yourfriendlyadc/" target="_blank">
                             <i class="fa-brands fa-pinterest"></i>
                         </a>
-                    </div>
-                </div>                                                         
+                    </div>                    
+                </div>                                                    
             </div>        
             <div class="about-galy">
                 <h3 class="title"> About Galy </h3>
@@ -84,10 +84,9 @@ function addFooter() {
 }
 
 // Let the Smooth scroll into the footer
-function scrollIntoFooter() {    
+function scrollIntoFooter() {
     const contactButton = document.querySelector("#contact");
     contactButton.addEventListener("click", function() {
-        const footer = document.querySelector("#footer");
         footer.scrollIntoView({
             behavior: "smooth"
         });    
@@ -110,7 +109,7 @@ function createImages(container, imagesAmount, classType) {
     }
 }
 
-function insertImages() {
+function setImages() {
     const phoneImages = document.querySelector(".phone-images");
     const deskImages = document.querySelector(".desk-images");
     createImages(deskImages, 15, "desk");
@@ -125,57 +124,59 @@ function showModal(image, classType) {
     modalImage.classList.add(classType);
     modalDownload.href = image;
     modalContainer.style.transform = "scale(1)";
-    modalContainer.style.borderRadius = "0%";
+    modalContainer.style.opacity = "1";
     closeButton.onclick = closeModal;
     modalContainer.onclick = closeModal;
 }
 
-function closeModal() {    
+function closeModal() {
     modalContainer.style.transform = "scale(0)";
-    modalContainer.style.borderRadius = "100%";    
+    modalContainer.style.opacity = "0";
 }
 
 function setCarousel(classType) {
+    //flex-carrusel father of this carousel element
     const carousel = document.querySelector(`.carrusel-${classType}`);
+
     if (!carousel) return
-    const carouselItemsContainer = document.createElement('div');
-    carouselItemsContainer.className = "carrusel-items";
-    for (let i = 0; i < 5; i++) {
+
+    const carouselItems = document.createElement('div');
+    carouselItems.className = `carrusel-${classType}-items`;
+    for (let i = 0; i < 7
+        ; i++) {
         const carouselItem = document.createElement('div');
         carouselItem.className = `carrusel-${classType}-item`;
         carouselItem.innerHTML = `
         <img src="images/${classType}/${i}.jpg">`;
-        carouselItemsContainer.appendChild(carouselItem);
+        carouselItems.appendChild(carouselItem);
     }
-    carousel.appendChild(carouselItemsContainer);
+    carousel.appendChild(carouselItems);
 }
 
-function startCarousel() {
-    const carouselItemsContainer = document.querySelector(".carrusel-items");
-    let car;
+function startCarousel(classType) {
+    const carouselItems = document.querySelector(`.carrusel-${classType}-items`);
+    let carouselFocusedItem;
     let position = 0;
     const observer = new IntersectionObserver(elementObserver, {
         rootMargin: "200px"
     });
 
     setInterval (function () { 
-        car = document.querySelector(".carrusel-items div");
-        carouselItemsContainer.style.left = `-${position}%`;
+        carouselFocusedItem = document.querySelector(`.carrusel-${classType}-items div`);
+        carouselItems.style.left = `-${position}%`;
         position++;
-        carouselItemsContainer.style.transition = 'all ease 1s';
+        carouselItems.style.transition = 'all ease 1s';
 
-        observer.observe(car);
+        observer.observe(carouselFocusedItem);
     }, 100);
     
     
     function elementObserver(entries) {
         entries.forEach(function(entry) {
-            
             if (!entry.isIntersecting) {
-
-                carouselItemsContainer.appendChild(entry.target);
-                carouselItemsContainer.style.left = "0.2%";
-                carouselItemsContainer.style.transition = 'none';
+                carouselItems.appendChild(entry.target);
+                carouselItems.style.left = "0.2%";
+                carouselItems.style.transition = 'none';
                 position = 0;
                 observer.unobserve(entry.target);
             }
