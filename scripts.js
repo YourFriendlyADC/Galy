@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollIntoFooter();
     setCarousel("phone");
     setCarousel("desk");
-    //startCarousel("phone");
-    //startCarousel("desk");
+    startCarousel("phone");
+    startCarousel("desk");
 });
 
 modalContent.addEventListener("click", function(e) { 
