@@ -11,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollIntoFooter();
     setCarousel("phone");
     setCarousel("desk");
-    startCarousel("phone");
-    startCarousel("desk");
 });
 
 modalContent.addEventListener("click", function(e) { 
@@ -20,7 +18,6 @@ modalContent.addEventListener("click", function(e) {
 });
 
 // Functions
-
 function addHeader() {
     const headerNav = document.querySelector("#navbar-header");
     headerNav.innerHTML = `
@@ -94,7 +91,7 @@ function scrollIntoFooter() {
 }
 
 function createImages(container, imagesAmount, classType) {
-    if (!container) return   
+    if (!container) return  
 
     for (let i = 0; i < imagesAmount; i++) {
         const imageContainer = document.createElement(`div`);
@@ -135,51 +132,11 @@ function closeModal() {
 }
 
 function setCarousel(classType) {
-    //flex-carrusel father of this carousel element
-    const carousel = document.querySelector(`.carrusel-${classType}`);
-
-    if (!carousel) return
-
-    const carouselItems = document.createElement('div');
-    carouselItems.className = `carrusel-${classType}-items`;
-    for (let i = 0; i < 7
-        ; i++) {
-        const carouselItem = document.createElement('div');
-        carouselItem.className = `carrusel-${classType}-item`;
-        carouselItem.innerHTML = `
-        <img src="images/${classType}/${i}.jpg">`;
-        carouselItems.appendChild(carouselItem);
+    const track = document.querySelector(`.slide-track-${classType}`);
+    if (!track) return  
+    for (let i = 0; i < 18; i++) {
+        track.innerHTML += `
+        <div class="${classType}-slide"></div>
+        `;        
     }
-    carousel.appendChild(carouselItems);
 }
-
-function startCarousel(classType) {
-    const carouselItems = document.querySelector(`.carrusel-${classType}-items`);
-    let carouselFocusedItem;
-    let position = 0;
-    const observer = new IntersectionObserver(elementObserver, {
-        rootMargin: "200px"
-    });
-
-    setInterval (function () { 
-        carouselFocusedItem = document.querySelector(`.carrusel-${classType}-items div`);
-        carouselItems.style.left = `-${position}%`;
-        position++;
-        carouselItems.style.transition = 'all ease 1s';
-
-        observer.observe(carouselFocusedItem);
-    }, 100);
-    
-    
-    function elementObserver(entries) {
-        entries.forEach(function(entry) {
-            if (!entry.isIntersecting) {
-                carouselItems.appendChild(entry.target);
-                carouselItems.style.left = "0.2%";
-                carouselItems.style.transition = 'none';
-                position = 0;
-                observer.unobserve(entry.target);
-            }
-        })
-    }
-};
