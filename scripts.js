@@ -2,6 +2,8 @@
 const modalContainer = document.querySelector(".modal-container");
 const modalContent = document.querySelector(".modal-content");
 const footer = document.querySelector("#footer");
+const toPhone = document.querySelector(".to-phone");
+const toDesk = document.querySelector(".to-desk");
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -16,6 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
 modalContent.addEventListener("click", function(e) { 
     e.stopPropagation();
 });
+
+toPhone.addEventListener("click", function() {
+    location.href = 'phone.html';
+});
+
+toDesk.addEventListener("click", function() {
+    location.href = 'desk.html';
+});
+
 
 // Functions
 function addHeader() {

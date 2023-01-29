@@ -28,19 +28,21 @@ h1 {
 /* Phone Carousel */
 .slider-phone {
     background: #879cfa;
-    height: 450px;
+    height: 470px;
     margin: auto;
     overflow: hidden;
     position: relative;
     width: 90%;
+    display: flex;
+    align-items: center;
 }
 
 .slider-phone::before, .slider-phone::after {
-    /* background: linear-gradient(to right, #879cfa 0%, rgba(255, 255, 255, 0) 100%); */
+    background: linear-gradient(to right, #879cfa 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
     height: 100%;
     position: absolute;
-    width: 100px;
+    width: 20px;
     z-index: 2;
 }
 
@@ -57,14 +59,19 @@ h1 {
 }
 
 .slider-phone .slide-track-phone {
-    animation: scroll-phone 15s linear infinite;
+    animation: scroll-phone 20s linear infinite;
     display: flex;
     width: calc(250px * 18);
+}
 
+.slider-phone .phone-slide:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
 }
 
 .slider-phone .slide-track-phone:hover {
     animation-play-state: paused;
+    transition: 1s;
 }
 
 .slider-phone .phone-slide {
@@ -131,19 +138,21 @@ h1 {
 /* Desktop Carousel */
 .slider-desk {
     background: #879cfa;
-    height: 250px;
+    height: 270px;
     margin: auto;
     overflow: hidden;
     position: relative;
     width: 90%;
+    display: flex;
+    align-items: center;
 }
 
 .slider-desk::before, .slider-desk::after {
-    /* background: linear-gradient(to right, #879cfa 0%, rgba(255, 255, 255, 0) 100%); */
+    background: linear-gradient(to right, #879cfa 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
     height: 100%;
     position: absolute;
-    width: 100px;
+    width: 20px;
     z-index: 2;
 }
 
@@ -160,7 +169,7 @@ h1 {
 }
 
 .slider-desk .slide-track-desk {
-    animation: scroll-desk 30s linear infinite;
+    animation: scroll-desk 40s linear infinite;
     display: flex;
     width: calc(500px * 18);
 }
@@ -176,6 +185,10 @@ h1 {
     width: 500px;
 }
 
+.slider-desk .desk-slide:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
+}
 
 .desk-slide:nth-child(1), .desk-slide:nth-child(10) {
     background: url(images/desk/0.jpg);
@@ -260,7 +273,7 @@ header {
 
 .brand-link i {
     margin-right: 0.25em;
-    color: #2bd42b;
+    color: #b7ffb0;
 }
 
 .brand-link span {
@@ -324,8 +337,27 @@ section .title {
     margin-top: 1.5em;
 }
 
-section .title h1{
+section .title h1 {
     margin: 0 0 20px;
+}
+
+section .title h1::after,
+section .title h1::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #031272;
+}
+
+section .title h1::before {
+    top: 110px;
+    left: 510px;
+}
+
+section .title h1::after {
+    top: 110px;
+    right: 510px;
 }
 
 section h3 {
@@ -679,7 +711,7 @@ footer .about-galy {
 
 @media only screen and (min-width: 1200px) {
     .navbar-container {
-        width: 40%;
+        width: 45%;
     }
     
     .desk {
