@@ -28,7 +28,7 @@ h1 {
 /* Phone Carousel */
 .slider-phone {
     background: #879cfa;
-    height: 470px;
+    height: 300px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -61,7 +61,7 @@ h1 {
 .slider-phone .slide-track-phone {
     animation: scroll-phone 20s linear infinite;
     display: flex;
-    width: calc(250px * 18);
+    width: calc(150px * 18);
 }
 
 .slider-phone .phone-slide:hover {
@@ -74,11 +74,17 @@ h1 {
     transition: 1s;
 }
 
-.slider-phone .phone-slide {
+/* .slider-phone .phone-slide {
     margin: 0 0.5em;
     border-radius: 1em;
     height: 450px;
     width: 250px;
+} */
+.slider-phone .phone-slide {
+    margin: 0 0.5em;
+    border-radius: 1em;
+    height: 280px;
+    width: 150px;
 }
 
 .phone-slide:nth-child(1), .phone-slide:nth-child(10) {
@@ -131,14 +137,14 @@ h1 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-250px * 9));
+        transform: translateX(calc(-150px * 9));
     }
 }
 
 /* Desktop Carousel */
 .slider-desk {
     background: #879cfa;
-    height: 270px;
+    height: 180px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -171,7 +177,7 @@ h1 {
 .slider-desk .slide-track-desk {
     animation: scroll-desk 40s linear infinite;
     display: flex;
-    width: calc(500px * 18);
+    width: calc(300px * 18);
 }
 
 .slider-desk .slide-track-desk:hover {
@@ -181,8 +187,8 @@ h1 {
 .slider-desk .desk-slide {
     margin: 0 0.5em;
     border-radius: 1em;
-    height: 250px;
-    width: 500px;
+    height: 160px;
+    width: 300px;
 }
 
 .slider-desk .desk-slide:hover {
@@ -240,7 +246,7 @@ h1 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-500px * 9));
+        transform: translateX(calc(-300px * 9));
     }
 }
 
@@ -273,7 +279,7 @@ header {
 
 .brand-link i {
     margin-right: 0.25em;
-    color: #b7ffb0;
+    color: #98ee90;
 }
 
 .brand-link span {
@@ -339,25 +345,6 @@ section .title {
 
 section .title h1 {
     margin: 0 0 20px;
-}
-
-section .title h1::after,
-section .title h1::before {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 2px;
-    background-color: #031272;
-}
-
-section .title h1::before {
-    top: 110px;
-    left: 510px;
-}
-
-section .title h1::after {
-    top: 110px;
-    right: 510px;
 }
 
 section h3 {
@@ -715,7 +702,7 @@ footer .about-galy {
     }
     
     .desk {
-        width: 420px;
-        height: 240px;
+        width: 400px;
+        height: 220px;
     }
 }
