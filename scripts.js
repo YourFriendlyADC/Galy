@@ -13,16 +13,18 @@ document.addEventListener("DOMContentLoaded", function() {
     setCarousel("desk");
 });
 
+if (location.href == 'index.html') {
+    toPhone.addEventListener("click", function() {
+        location.href = 'phone.html';
+    });
+    
+    toDesk.addEventListener("click", function() {
+        location.href = 'desk.html';
+    });
+}
+
 modalContent.addEventListener("click", function(e) { 
     e.stopPropagation();
-});
-
-toPhone.addEventListener("click", function() {
-    location.href = 'phone.html';
-});
-
-toDesk.addEventListener("click", function() {
-    location.href = 'desk.html';
 });
 
 // Functions
