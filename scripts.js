@@ -81,7 +81,10 @@ function addFooter() {
                         </a>
                     </div>                    
                 </div>                                                    
-            </div>        
+            </div>
+            <div class="send-wallpapers">
+                <a href="send.html" target="_blank"> Do you want to share your wallpapers? </a>
+            </div>
             <div class="about-galy">
                 <h3 class="title"> About Galy </h3>
                 <p class=""description> With Galy you can look for wallpapers and download it in an easy way.
@@ -101,16 +104,16 @@ function scrollIntoFooter() {
 }
 
 function createImages(container, imagesAmount, classType) {
-    if (!container) return  
-
+    if (!container) return
+    
     for (let i = 0; i < imagesAmount; i++) {
         const imageContainer = document.createElement(`div`);
         imageContainer.innerHTML = `
-                <label for="modal-button">
-                    <img class="card ${classType}" src="images/${classType}/${i}.JPG" title="image" loading="lazy">
-                </label> `;
+            <label for="modal-button">
+                <img class="card ${classType}" src="./images/${classType}/${i}.jpg" title="image" loading="lazy">
+            </label> `;
         imageContainer.onclick = function() {
-            showModal(`images/${classType}/${i}.JPG`, classType);
+            showModal(`images/${classType}/${i}.jpg`, classType);
         }        
         container.appendChild(imageContainer);        
     }
@@ -119,8 +122,8 @@ function createImages(container, imagesAmount, classType) {
 function setImages() {
     const phoneImages = document.querySelector(".phone-images");
     const deskImages = document.querySelector(".desk-images");
-    createImages(deskImages, 15, "desk");
-    createImages(phoneImages, 30, "phone");
+    createImages(deskImages, 8, "desk");
+    createImages(phoneImages, 5, "phone");
 }
 
 function showModal(image, classType) {

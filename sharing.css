@@ -1,0 +1,36 @@
+.drag-and-drop-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10em;
+  margin: 1.2em;
+  background-color: #4466d4;
+  border-radius: 1em;
+}
+
+.drag-and-drop-container h3 { 
+  color: #EFF9FE;
+  margin: 3em 0.75em;
+}
+
+.drag-and-drop, .o {
+  display: none;
+}
+
+.archives {
+  background-color: #304fb6;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .drag-and-drop, .o {
+    display: flex;
+  }
+
+  .drag-and-drop {
+    border: 5px dotted rgb(23, 53, 151);
+    border-radius: 1em;
+  }
+}
