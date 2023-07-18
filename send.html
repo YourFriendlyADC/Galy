@@ -12,35 +12,32 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/6b69f5d989.js" crossorigin="anonymous"></script>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C74GZEW525"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-C74GZEW525');
-        </script>
+        <script src="https://kit.fontawesome.com/6b69f5d989.js" crossorigin="anonymous"></script>        
     </head>
 
 <body>
     <header class="navbar" id="navbar-header"> <!-- Header --> </header>
     <section>
         <div class="title">
-            <h1> Share your wallpaper! </h1>                
+            <h1> Share your wallpaper! </h1>
+            <p> <b>Requirements</b> </p>
+            <p> Do not send sexual content </p>
+            <p> Do not send content that is not from you property </p> <br>
+            <p> <b> Resolutions must be (at least): </b></p>
+            <p> 1080x1920(Phone) - 3840x2160(Desktop) </p>
         </div>
-        <div class="drag-and-drop-container">
-            <div class="drag-and-drop">
-                <h3> Take your beauty wallpaper and drop it here </h3>
-            </div>
-            <h3 class="o"> o </h3>
-            <a href="" class="archives">
-                Selecciona tus wallpapers
-            </a>
+
+        <div class="drag-area">
+            <h3 class="drag-and-drop"> Drop your beautiful wallpaper here </h3>
+            <h3 class="o"> or </h3>
+            <button class="archives"> Select your wallpapers </button>
+            <input type="file" name="" id="input-file" hidden multiple>
         </div>
+        <div id="preview"></div>
+
         <br>
     </section>
     <footer id="footer"> <!-- footer  --> </footer>
-    <script src="JS/scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

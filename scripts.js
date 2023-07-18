@@ -23,9 +23,12 @@ if (location.href == 'index.html') {
     });
 }
 
-modalContent.addEventListener("click", function(e) { 
-    e.stopPropagation();
-});
+if (location.href == 'phone.html' || location.href == 'desk.html') {
+    modalContent.addEventListener("click", function(e) { 
+        e.stopPropagation();
+    });
+}
+
 
 // Functions
 function addHeader() {
@@ -74,22 +77,15 @@ function addFooter() {
                         <a href="https://twitter.com/yourfriendlyadc" target="_blank">                        
                             <i class="fa-brands fa-twitter"></i>
                         </a>
-                    </div>
-                    <div class="pt">
-                        <a href="https://www.pinterest.com/yourfriendlyadc/" target="_blank">
-                            <i class="fa-brands fa-pinterest"></i>
-                        </a>
                     </div>                    
                 </div>                                                    
             </div>
-            <div class="send-wallpapers">
+            <!-- <div class="send-wallpapers">
                 <a href="send.html" target="_blank"> Do you want to share your wallpapers? </a>
-            </div>
+            </div> -->
             <div class="about-galy">
                 <h3 class="title"> About Galy </h3>
-                <p class=""description> With Galy you can look for wallpapers and download it in an easy way.
-                All of these wallpapers are NOT mine, I just compilated them and put them here.
-                I hope you found anyone you like and just use it! </p>                
+                <p class=""description> With Galy you can look for wallpapers and download it in an easy way. All of these wallpapers were created by Leonardo AI and they aren't used for commercial purposes, such as this website. I hope you found anyone you like and just download it! </p>                
             </div>`;
 }
 
@@ -110,10 +106,10 @@ function createImages(container, imagesAmount, classType) {
         const imageContainer = document.createElement(`div`);
         imageContainer.innerHTML = `
             <label for="modal-button">
-                <img class="card ${classType}" src="./images/${classType}/${i}.jpg" title="image" loading="lazy">
+                <img class="card ${classType}" src="./images/${classType}/${i}.png" title="image" loading="lazy">
             </label> `;
         imageContainer.onclick = function() {
-            showModal(`images/${classType}/${i}.jpg`, classType);
+            showModal(`images/${classType}/${i}.png`, classType);
         }        
         container.appendChild(imageContainer);        
     }
@@ -122,8 +118,8 @@ function createImages(container, imagesAmount, classType) {
 function setImages() {
     const phoneImages = document.querySelector(".phone-images");
     const deskImages = document.querySelector(".desk-images");
-    createImages(deskImages, 8, "desk");
-    createImages(phoneImages, 5, "phone");
+    createImages(deskImages, 15, "desk");
+    createImages(phoneImages, 25, "phone");
 }
 
 function showModal(image, classType) {
@@ -152,4 +148,88 @@ function setCarousel(classType) {
         <div class="${classType}-slide"></div>
         `;        
     }
+}
+
+// Share Wallpapers
+const dragAndDropContainer = document.querySelector('.drag-and-drop-container');
+const dragAndDrop = document.querySelector('.drag-and-drop');
+const dropButton = document.querySelector('.archives');
+const dropInput = document.querySelector('#input-file');
+let files;
+
+dropButton.addEventListener("click", (e) => {
+    dropInput.click();    
+});
+
+dropInput.addEventListener("change", (e => {
+    files = this.files;
+    dragAndDropContainer.classList.add("active");
+    showFile(files);
+    dragAndDropContainer.classList.remove("active");
+}));
+
+dragAndDropContainer.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dragAndDropContainer.classList.add("active");
+    // dragAndDrop.textContent = "Suelta";
+});
+
+dragAndDropContainer.addEventListener("dragleave", (e) => {
+    e.preventDefault();
+    dragAndDropContainer.classList.remove("active");
+    // dragAndDrop.textContent = "Arrastra archivos";
+});
+
+dragAndDropContainer.addEventListener("drop", (e) => {
+    e.preventDefault();
+    files = e.dataTransfer.files;
+    showFile(files);
+    dragAndDropContainer.classList.remove("active");
+    // dragAndDrop.textContent = "Arrastra archivos";
+});
+
+function showFile(files) {
+    if (files.lenght == undefined) {
+        processFile(files);
+    } else {
+        for (const file of files) {
+            processFile(file);
+        }
+    }
+}
+
+function processFile(file) {
+    const docType = file.type;
+    const validExtensions = ['png', 'image/jpg', 'image/jpeg'];
+    console.log(docType);
+    
+    if (validExtensions.includes(docType)) {
+        const fileReader = new FileReader();
+        const id = `file-${Math.random().toString(32).substring(7)}`;
+
+        fileReader.addEventListener("load", (e) => {
+            const fileUrl = fileReader.result;
+            const image = `
+                <div id="${id}" class="file-container">
+                    <img src="${fileUrl}" alt="${file.name}" width="50px">
+                    <div class="status">
+                        <span>${file.name}</span>
+                        <span class="status-text">
+                            Loading...
+                        </span>
+                    </div>
+                </div>`;
+
+            const html = document.querySelector('#preview').innerHTML;
+            document.querySelector('#preview').innerHTML = image + html;
+        });
+        fileReader.readAsDataURL(file);
+        uploadFile(file, id);
+    } else { //Arreglar esto
+        alert("Archivo no válido");
+    }
+}
+
+function uploadFile() {
+
 }
