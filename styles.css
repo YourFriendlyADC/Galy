@@ -287,7 +287,7 @@ header {
 
 .brand-link i {
     margin-right: 0.25em;
-    color: #f3bc89;
+    color: #f5cda7;
 }
 
 .brand-link span {
@@ -347,7 +347,7 @@ section {
 
 section .title {
     text-align: center;
-    color: #0f319e;
+    color: #193a59;
     margin-top: 1.5em;
 }
 
@@ -358,7 +358,7 @@ section .title h1 {
 section h3 {
     margin: 2em 0 0.8em;
     font-size: 1.25em;
-    color: #0f319e;
+    color: #193a59;
     text-align: center;
 }
 
