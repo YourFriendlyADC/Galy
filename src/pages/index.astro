@@ -1,0 +1,35 @@
+---
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="images/galy.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6b69f5d989.js" crossorigin="anonymous"></script>
+		<title>Galy</title>
+	</head>
+
+	<body class="bg-background">
+		<Header/>
+
+		<Footer/>
+	</body>
+
+	<style>
+		* {
+			font-family: 'Rowdies', cursive;
+			margin: 0;
+        	padding: 0;
+        	box-sizing: border-box;
+			overflow-x: hidden;
+		}
+	</style>
+
+</html>
