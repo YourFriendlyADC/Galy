@@ -1,35 +1,23 @@
 ---
-import Header from '../components/header.astro';
-import Footer from '../components/footer.astro';
+import Layout from '../components/layout.astro';
+import Carousel from '../components/carousel.astro';
+import '../styles/home.css';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="images/galy.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/6b69f5d989.js" crossorigin="anonymous"></script>
-		<title>Galy</title>
-	</head>
+<Layout pageSection="Home">
+		<content class="bg-gradient-to-t from-[#19bfc8] to-[#D9EEEF]">
+			<!-- <div class="mobile">
+				<Carousel type="mobile"/>
+			</div> -->
+	
+			<div class="galy-logo">
+				<img src="../../public/images/galy-logo.png" alt="">
+				<h2 class="text-[#193A59]">Coming soon!</h2>
+			</div>
 
-	<body class="bg-background">
-		<Header/>
-
-		<Footer/>
-	</body>
-
-	<style>
-		* {
-			font-family: 'Rowdies', cursive;
-			margin: 0;
-        	padding: 0;
-        	box-sizing: border-box;
-			overflow-x: hidden;
-		}
-	</style>
-
-</html>
+			<!-- <div class="desktop">
+				<img src="../../public/images/desktop/3.png" alt="Wallpaper" loading="lazy">
+				<img src="../../public/images/desktop/1.png" alt="Wallpaper" loading="lazy">
+			</div> -->
+		</content>
+</Layout>

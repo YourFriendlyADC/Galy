@@ -1,10 +1,23 @@
-<footer>
+---
+import '../styles/footer.css';
+---
 
-    <img class="icon" src="images/GY.png" title="Galy">
+<footer class="bg-[#19bfc8]
+text-[#fff] p-4
+flex flex-col
+justify-center
+items-center
+sm:flex-row
+sm:justify-evenly
+sm:items-start">
+
+    <img class="icon hidden
+    sm:block sm:w-24 h-24"
+    src="images/GY.png" title="Galy">
 
     <div class="about-me">
                     
-        <h3 class="title"> Follow me </h3>
+        <h3 class="title text-[#D9EEE]"> Follow me </h3>
             
         <div class="social">
 
@@ -34,67 +47,9 @@
         <a href="send.html" target="_blank"> Do you want to share your wallpapers? </a>
     </div> -->
 
-    <div class="about-galy">
-        <h3 class="title"> About Galy </h3>
+    <div class="about-galy w-5/6 sm:w-2/5">
+        <h3 class="title text-[#D9EEE]"> About Galy </h3>
         <p class="description"> Here you can look for wallpapers and download easily. All of these wallpapers were created by Leonardo AI and they aren't used for commercial purposes, such as this website. </p>                
     </div>
 
 </footer>
-
-<style>
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-        background-color: #03888F;
-        color: #fff;
-        padding: 1em;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
-
-    img {
-        width: 6em;
-        height: 6em;
-    }
-
-    h3 {
-        color: #D9EEEF;
-    }
-
-    .about-me {
-        width: 20em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-me .tt, .about-me .ig, .about-me .portfolio {
-        padding: 0.5em;
-        font-size: 1.75em;
-    }
-
-    .social {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .about-galy {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 40%;
-    }
-
-    .about-galy p {
-        font-size: .9em;
-        font-weight: 100;
-        text-align: justify;
-    }
-</style>

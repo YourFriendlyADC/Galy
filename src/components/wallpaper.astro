@@ -1,0 +1,52 @@
+<div id="modal-component-container" class="fixed inset-0">
+    <div class="modal-flex-container" class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="modal-bg-container fixed inset-0 bg-gray-700 bg-opacity-75"></div>
+
+        <div class="modal-space-container"></div>
+
+        <div class="modal-container 
+        inline-block align-bottom bg-white
+        rounded-lg text-left shadow-xl
+        overflow-hidden transform transition-all
+        sm:my-8 sm:align-middle sm:max-w-lg
+        w-full">
+            <div class="modal-wrapper
+            bg-white px-4 pt-5 pb-4
+            sm:p-6 sm:pb-4">
+                <div class="modal-wrapper-flex
+                sm:flex sm:items-start">
+                    <div class="modal-content"></div>
+                    <h3>Titulo de wallpaper</h3>
+                    <img class="card" src="../public/images/phone/4.png" title="image" loading="lazy">
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button>Descargar</button>
+                <button>Salir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .wallpapers-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 2em;
+        margin: 1em auto;
+        width: 100%;
+        max-width: 1000px;
+        background-color: aqua;
+    }
+
+    img {
+        width: 10em;
+        height: 21.5em;
+        border-radius: .5em;
+    }
+</style>

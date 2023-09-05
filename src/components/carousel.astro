@@ -1,6 +1,39 @@
-<h3> For Phone </h3>
-    <a href="/phone.html" class="to-phone">
-        <div class="slider-phone">
-            <div class="slide-track-phone"></div>
-        </div>
-    </a>
+---
+import '../styles/carousel.css';
+const {type} = Astro.props;
+
+// function setCarousel(type) {
+//     const track = document.querySelector(`.slide-track-${type}`);
+//     if (!track) return
+//     for (let i = 0; i < 18; i++) {
+//         track.innerHTML += `
+//         <div class="${type}-slide"></div>
+//         `;        
+//     }
+// }
+
+// setCarousel(type);
+---
+
+<div class="slider-{type}">
+    <div class="slide-track">
+        <img class="slide" src="../../public/images/{type}/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+        <img class="slide" src="../../public/images/phone/4.png"></img>
+    </div>
+</div>
