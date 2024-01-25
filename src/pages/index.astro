@@ -1,23 +1,82 @@
 ---
 import Layout from '../components/layout.astro';
 import Carousel from '../components/carousel.astro';
-import '../styles/home.css';
 ---
 
 <Layout pageSection="Home">
-		<content class="bg-gradient-to-t from-[#19bfc8] to-[#D9EEEF]">
-			<!-- <div class="mobile">
-				<Carousel type="mobile"/>
-			</div> -->
-	
-			<div class="galy-logo">
-				<img src="../../public/images/galy-logo.png" alt="">
-				<h2 class="text-[#193A59]">Coming soon!</h2>
+		<content class="hero-section flex flex-col justify-center items-center sm:flex-row sm:justify-evenly sm:items-center w-full h-[100vh]">
+			<div class="galy-logo sm:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center sm:my-0 mb-5">
+				<img class="w-[8rem] sm:w-[16rem]" src="../../public/images/galy.png" alt="">
 			</div>
 
-			<!-- <div class="desktop">
-				<img src="../../public/images/desktop/3.png" alt="Wallpaper" loading="lazy">
-				<img src="../../public/images/desktop/1.png" alt="Wallpaper" loading="lazy">
-			</div> -->
+			<div class="flex flex-col text-center sm:items-center w-3/4 sm:w-2/5">
+
+				<h1 class="bg-gradient-to-r from-[#cb7131] to-[#f0924f] text-2xl sm:text-4xl text-transparent bg-clip-text sm:leading-[3rem]">Welcome to Galy!</h1>
+
+				<h2 class="bg-gradient-to-r from-[#193A59] to-[#03888F] text-lg sm:text-xl text-transparent bg-clip-text font-light">Discover a world of captivating visuals! Immerse yourself in a stunning collection of high-quality wallpapers, perfectly suited for all your devices.</h2>
+
+				<div class="hidden sm:block sm:h-0.5 sm:w-full sm:mt-2 mb-4 bg-[#193A59]"></div>
+
+				<h3 class="bg-gradient-to-r from-[#03888F] to-[#193A59] mt-2 text-xs font-light text-[#fff] p-2 rounded-xl flex items-center justify-center gap-1">
+					<i class="fa-solid fa-down-long animate-bounce"></i>
+					Scroll down to watch what we have for you!
+					<i class="fa-solid fa-down-long animate-bounce"></i>
+				</h3>
+
+			</div>
 		</content>
+
+		<content class="info-section flex flex-col mt-6 gap-8 sm:justify-start items-center sm:h-[75vh]">
+			<div class="mx-10 sm:mx-20 flex flex-col items-center">
+				<i class="fa-solid fa-question p-2 bg-gradient-to-r from-[#741e1e] to-[#ae5151] text-transparent bg-clip-text text-4xl"></i>
+				<h2 class="text-[#822929] text-lg">
+					What is Galy?
+				</h2>
+				<p class="text-[#193A59] text-center">
+					Galy is a wallpaper platform that offers a wide range of high-quality wallpapers for your devices. We have a large collection of wallpapers that are sure to suit your style and personality. Whether you're looking for something simple or more complex, we have it all! (not yet really)
+				</p>
+			</div>
+
+			<div class="flex flex-col justify-center sm:flex-row w-5/6 sm:w-[90%] mx-auto gap-10">
+
+				<div class="flex flex-col sm:m-0 items-center bg-gradient-to-b from-[#193A59] to-[#026f75] rounded-md">
+					<i class="fa-solid fa-circle-plus bg-gradient-to-r from-[#8f52b8] to-[#bd86e2] text-transparent bg-clip-text text-4xl pt-4 pb-2"></i>
+					<p class="text-[#ffffff] text-sm font-light text-center px-4 pb-4">
+						<span class="text-[#bc84e2]">Easy Download</span><br>Downloading your favorite wallpaper is a breeze. With just a few clicks, you can transform your device's look and feel. It's quick, hassle-free, and free of charge!
+					</p>
+				</div>
+				
+				<div class="flex flex-col sm:m-0 items-center bg-gradient-to-b from-[#193A59] to-[#026f75] rounded-md">
+					<i class="fa-solid fa-fire-flame-curved pt-4 bg-gradient-to-r from-[#cb7131] to-[#f0924f] text-transparent bg-clip-text text-4xl pb-2"></i>
+					<p class="text-[#ffffff] text-sm font-light text-center px-4 pb-4">
+						<span class="text-[#e88e68]">Fresh Content</span><br>Our library is constantly updated with new and exciting wallpapers to keep your screens feeling fresh and inspiring. Don't settle for static backgrounds when you can switch it up whenever you like.
+					</p>
+				</div>
+				
+				<div class="flex flex-col sm:m-0 items-center bg-gradient-to-b from-[#193A59] to-[#026f75] rounded-md">
+					<i class="fa-solid fa-magnifying-glass bg-gradient-to-r from-[#1aa43c] to-[#6eef8e] text-4xl text-transparent bg-clip-text pt-4 pb-2"></i>
+					<p class="text-[#ffffff] text-sm font-light text-center px-4 pb-4">
+						<span class="text-[#50db72]">Simple Navigation</span><br>Our user-friendly website is designed with you in mind. You can easily search for wallpapers by category, color, or even resolution, ensuring you find the perfect backdrop for your device.
+					</p>
+				</div>
+			</div>
+			<h2 class="w-5/6 text-lg sm:text-xl text-[#ffffff] text-center">
+				Make us your trusted web page today and start your daily dose of inspiration!
+			</h2>
+		</content>
+
+		<!-- <content class="carousel-section flex flex-col items-center justify-center my-6">
+
+
+			<h3 class="text-md font-light text-[#ffffff] mb-4">For mobile</h3>
+			<Carousel type="phone"/>
+
+			<h3 class="text-md font-light text-[#ffffff] mb-4 mt-10">For desktop</h3>
+			
+			<h3 class="text-md font-light text-[#ffffff] mb-4 mt-10">Very soon... For tablet</h3>
+			<h2 class="text-[#822929] text-center">
+				Our Latest Wallpapers
+			</h2>
+			<Carousel type="desktop"/>
+		</content> -->
 </Layout>

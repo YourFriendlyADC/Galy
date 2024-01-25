@@ -2,72 +2,71 @@
 
 ---
 
-<header class="navbar bg-[#D9EEEF] py-2" id="navbar-header">
-
-    <nav class="navbar-header
-    flex justify-between items-center px-4
+<header class="navbar py-2 relative" id="navbar-header">
+    <!-- para fixed header poner relative arriba y fixed top-0 left-0 right-0 abajo -->
+    <nav class="navbar-header fixed top-2 left-0 right-0
+    flex justify-between items-center px-4 z-100
     sm:flex sm:justify-between sm:items-center sm:px-4">
 
-        <div class="logo">
+        <div class="logo px-2 py-1 cursor-pointer hover:bg-[#9dc6d27b] rounded-md bg-[#D9EEEFAA]">
 
             <a href="/" class="brand-link flex justify-center gap-1
             text-[#03888F] font-light text-base">                    
                 <i class="fa-solid fa-leaf text-2xl  text-[#ea8740]"></i>
-                <span class="brand text-[#03888F] text-2xl font-light"> Galy </span>
+                <span class="brand bg-gradient-to-r from-[#02696e] to-[#193A59]
+                text-transparent bg-clip-text text-2xl font-light"> Galy </span>
             </a>
 
         </div>
 
-        <div class="links absolute sm:static duration-500
-        flex px-5 gap-8 sm:gap-2 bg-[#D9EEEF]
-        flex-col min-h-[100vh] left-0 top-[-100%] w-full
-        sm:w-auto items-center justify-center sm:flex-row sm:min-h-fit">
+        <div class="links absolute sm:static flex gap-8 sm:gap-2 right-0
+        sm:w-auto items-center justify-center sm:flex-row sm:min-h-fit mr-1">
 
-            <div class="list flex sm:flex-row items-center
-            flex-col">
+            <div class="list flex sm:flex-row items-center flex-row">
                 
-                <a href="/" class="navbar-link 
-                    text-[#03888F] mx-2 px-4 py-2 rounded-lg my-4
-                    font-light text-2xl sm:text-base duration-300 inline-flex items-center
+                <div class="a-container cursor-pointer hover:bg-[#9dc6d27b] duration-200 rounded-md">
+                    <a href="/" class="navbar-link w-[3.5rem] sm:w-[6.5rem] justify-center
+                    m-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-[#03888F] to-[#193A59] text-[#D9EEEF]
+                    font-light text-xl sm:font-thin sm:text-sm duration-300 inline-flex items-center
                     hover:bg-[#07A0A8] hover:text-[#D9EEEF] hover:duration-300">
-                    <i class="fa-solid fa-house pr-1"></i>
-                    <span>Home</span>
-                </a>
+                        <i class="fa-solid fa-house pr-1"></i>
+                        <span class="hidden sm:block">Home</span>
+                    </a>
+                </div>
             
-                <a href="mobile.html" class="navbar-link 
-                    text-[#03888F] mx-2 px-4 py-2 rounded-lg my-4
-                    font-light text-2xl sm:text-base duration-300 inline-flex items-center
-                    hover:bg-[#07A0A8] hover:text-[#D9EEEF] hover:duration-300">
-                    <i class="fa-solid fa-mobile pr-1"></i>
-                    <span>Mobile</span>
-                </a>
+                <div class="a-container cursor-pointer hover:bg-[#9dc6d27b] duration-200 rounded-md">
+                    <a href="/mobile.html" target="_blank" class="navbar-link w-[3.5rem] sm:w-[6.5rem] justify-center
+                    m-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-[#03888F] to-[#193A59] text-[#D9EEEF]
+                    font-light text-xl sm:font-thin sm:text-sm inline-flex items-center">
+                        <i class="fa-solid fa-mobile pr-1"></i>
+                        <span class="hidden sm:block">Mobile</span>
+                    </a>
+                </div>
             
-                <a href="desktop.html" class="navbar-link 
-                    text-[#03888F] m-3 px-4 py-2 rounded-lg
-                    font-light text-2xl sm:text-base duration-300 inline-flex items-center
-                    hover:bg-[#07A0A8] hover:text-[#D9EEEF] hover:duration-300">
-                    <i class="fa-solid fa-desktop pr-1"></i>
-                    <span>Desktop</span>
-                </a>
+                <div class="a-container cursor-pointer hover:bg-[#9dc6d27b] duration-200 rounded-md">
+                    <a href="/desktop.html" class="navbar-link w-[3.5rem] sm:w-[6.5rem] justify-center
+                    m-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-[#03888F] to-[#193A59] text-[#D9EEEF]
+                    font-light text-xl sm:font-thin sm:text-sm duration-300 inline-flex items-center
+                    hover:bg-slate-500 hover:text-[#D9EEEF] hover:duration-300">
+                        <i class="fa-solid fa-desktop pr-1"></i>
+                        <span class="hidden sm:block">Desktop</span>
+                    </a>
+                </div>
             
-                <a href="" class="navbar-link 
-                    text-[#03888F] mx-2 px-4 py-2 rounded-lg my-4
-                    font-light text-2xl sm:text-base duration-300 inline-flex items-center
-                    hover:bg-[#07A0A8] hover:text-[#D9EEEF] hover:duration-300">
-                    <i class="fa-solid fa-circle-info pr-1"></i>
-                    <span>Contact</span>
-                </a>
+                <!-- <div class="a-container cursor-pointer hover:bg-[#9dc6d27b] duration-200 rounded-md">
+                    <a href="tablet.html" class="navbar-link w-40 sm:w-[6.5rem] justify-center m-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-[#03888F] to-[#193A59] text-[#D9EEEF]
+                    font-light text-2xl sm:font-thin sm:text-sm duration-300 inline-flex items-center hover:bg-[#07A0A8] hover:text-[#D9EEEF] hover:duration-300">
+                        <i class="fa-solid fa-tablet pr-1"></i>
+                        <span>Tablet</span>
+                    </a>
+                </div> -->
             
             </div>
         </div>
 
-        <div class="sm:hidden">
+        <!-- <div class="sm:hidden">
             <i id="fa-button" class="fa-solid fa-caret-down text-[#03888F] text-3xl p-2 cursor-pointer sm:hidden"></i>
-
-            <!-- <ion-icon id="iobutton"
-            name="caret-down-outline"
-            class=""></ion-icon> -->
-        </div>
+        </div> -->
 
     </nav>
 
@@ -77,7 +76,9 @@
     const faButton = document.getElementById('fa-button');
     const links = document.getElementById('navbar-header').querySelector('.links');
     faButton.addEventListener('click', () => {
-        links.classList.toggle('top-[10vh]');
+        console.log('clicked');
+        links.classList.toggle('top-16');
+        links.classList.toggle('bg-[#D9EEEF]');
         // links.classList.toggle('fixed');
         // faButton.className = faButton.className === 'fa-solid fa-square-caret-down' ? 'fa-solid fa-rectangle-xmark' : 'fa-solid fa-square-caret-down';
         if (faButton.className == 'fa-solid fa-caret-down text-[#03888F] text-3xl p-2 cursor-pointer sm:hidden') {

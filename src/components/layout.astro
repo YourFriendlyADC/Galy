@@ -1,7 +1,6 @@
 ---
 import Header from "./header.astro";
 import Footer from "./footer.astro";
-import '../styles/layout.css';
 const {pageSection = "Home"} = Astro.props;
 ---
 
@@ -17,13 +16,24 @@ const {pageSection = "Home"} = Astro.props;
         <script src="https://kit.fontawesome.com/6b69f5d989.js" crossorigin="anonymous"></script>
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 		<title>Galy | {pageSection}</title>
 	</head>
 
-	<body class="bg-background">
+	<body class="bg-gradient-to-b from-[#D9EEEF] to-[#06979f] flex flex-col justify-between">
         <Header/>
         <slot/>
         <Footer/>
     </body>
 
 </html>
+
+<style>
+	* {
+		font-family: 'Rowdies', cursive;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		overflow-x: hidden;
+	}
+</style>

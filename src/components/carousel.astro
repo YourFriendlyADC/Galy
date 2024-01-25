@@ -1,39 +1,65 @@
 ---
 import '../styles/carousel.css';
 const {type} = Astro.props;
-
-// function setCarousel(type) {
-//     const track = document.querySelector(`.slide-track-${type}`);
-//     if (!track) return
-//     for (let i = 0; i < 18; i++) {
-//         track.innerHTML += `
-//         <div class="${type}-slide"></div>
-//         `;        
-//     }
-// }
-
-// setCarousel(type);
 ---
 
-<div class="slider-{type}">
-    <div class="slide-track">
-        <img class="slide" src="../../public/images/{type}/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
-        <img class="slide" src="../../public/images/phone/4.png"></img>
+<body>
+    <div class="slider self-center rounded-lg bg-transparent">
+        <div class="slide-track gap-2">
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/0.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/1.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/2.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/3.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/4.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/5.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/6.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/7.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/8.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/0.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/1.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/2.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/3.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/4.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/5.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/6.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/7.png" alt="">
+            </div>
+            <div class="slide w-[180px] h-[350px]">
+                <img class="w-[180px] h-[350px] rounded-lg" src="../../public/images/phone/8.png" alt="">
+            </div>
+        </div>
     </div>
-</div>
+</body>
